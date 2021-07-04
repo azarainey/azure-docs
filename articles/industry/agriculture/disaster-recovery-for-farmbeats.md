@@ -1,10 +1,10 @@
 ---
 title: Disaster recovery for FarmBeats
 description: This article describes how data recovery protects from losing your data.
-author: uhabiba04
+author: RiyazPishori
 ms.topic: article
 ms.date: 04/13/2020
-ms.author: v-umha
+ms.author: riyazp
 ---
 
 # Disaster recovery for FarmBeats
@@ -23,7 +23,7 @@ The following sections provide information about how you can configure data reco
 
 FarmBeats stores data in three Azure first party services, which are **Azure storage**, **Cosmos DB** and **Time Series Insights**. Use the following steps to enable data redundancy for these services to a paired Azure region:
 
-1.	**Azure Storage** - Follow this guideline to enable data redundancy for each storage account in your FarmBbeats deployment.
+1.	**Azure Storage** - Follow this guideline to enable data redundancy for each storage account in your FarmBeats deployment.
 2.	**Azure Cosmos DB** - Follow this guideline to enable data redundancy for Cosmos DB account your FarmBeats deployment.
 3.	**Azure Time Series Insights (TSI)** - TSI currently doesn't offer data redundancy. To recover Time Series Insights data, go to your sensor/weather partner and push the data again to FarmBeats deployment.
 
@@ -40,18 +40,18 @@ You can initiate failover and recover data stored for which, each of the above-m
 Copy the access key of the restored Cosmos DB and update the new FarmBeats Datahub Key Vault.
 
 
-  ![Disaster Recovery](./media/disaster-recovery-for-farmbeats/key-vault-secrets.png)
+  ![Screenshot that highlights where to get the copy of the access key.](./media/disaster-recovery-for-farmbeats/key-vault-secrets.png)
 
 > [!NOTE]
 > Copy the URL of restored Cosmos DB and update it in the new FarmBeats Datahub App Service Configuration. You can now delete Cosmos DB account in the new FarmBeats deployment.
 
-  ![Disaster Recovery](./media/disaster-recovery-for-farmbeats/configuration.png)
+  ![Screenshot that shows where to copy the URL of restored Cosmos DB.](./media/disaster-recovery-for-farmbeats/configuration.png)
 
 ### Configure Storage Account
 
 Copy the access key of the restored storage account and update it in the new FarmBeats Datahub Key Vault.
 
-![Disaster Recovery](./media/disaster-recovery-for-farmbeats/key-vault-7-secrets.png)
+![Screenshot that shows where to copy the access key of the restored storage account.](./media/disaster-recovery-for-farmbeats/key-vault-7-secrets.png)
 
 >[!NOTE]
 > Ensure to Update Storage Account name in the new FarmBeats Batch VM config file.

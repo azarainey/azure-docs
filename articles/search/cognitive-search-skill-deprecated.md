@@ -3,9 +3,8 @@ title: Deprecated cognitive skills
 titleSuffix: Azure Cognitive Search
 description: This page contains a list of cognitive skills that are considered deprecated and will not be supported in the near future in Azure Cognitive Search skillsets.
 
-manager: nitinme
-author: luiscabrer
-ms.author: luisca
+author: vkurpad
+ms.author: vikurpad
 ms.service: cognitive-search
 ms.topic: conceptual
 ms.date: 11/04/2019
@@ -34,7 +33,7 @@ February 15, 2019
 
 Use [Microsoft.Skills.Text.EntityRecognitionSkill](cognitive-search-skill-entity-recognition.md) instead. It provides most of the functionality of the NamedEntityRecognitionSkill at a higher quality. It also has richer information in its complex output fields.
 
-To migrate to the [Entity Recognition Skill](cognitive-search-skill-entity-recognition.md), you will have to perform one or more of the following changes to your skill definition. You can update the skill definition using the [Update Skillset API](https://docs.microsoft.com/rest/api/searchservice/update-skillset).
+To migrate to the [Entity Recognition Skill](cognitive-search-skill-entity-recognition.md), you will have to perform one or more of the following changes to your skill definition. You can update the skill definition using the [Update Skillset API](/rest/api/searchservice/update-skillset).
 
 > [!NOTE]
 > Currently, confidence score as a concept is not supported. The `minimumPrecision` parameter exists on the `EntityRecognitionSkill` for future use and for backwards compatibility.
